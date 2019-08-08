@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RestaurantsMVC.Models;
+@model List<RestaurantsMVC.Models.Review>;
+
+<h1>Reviews</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No reviews have been added yet!</h3>
+} 
+
+
+
+@foreach (Review review in Model)
+{
+  <p>
+    @review.Name<br>
+    @review.Date<br>
+    @review.ReviewText
+  </p>
+}
+
+<p>@Html.ActionLink("Add a new restaurant", "Create")</p>
