@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@using ProjectName.Models;
+@model List<ProjectName.Models.Class1>;
+
+<h1>Categories</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No categories have been added yet!</h3>
+} 
+
+
+<ul>
+  @foreach (Class1 category in Model)
+{
+  <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.Class1Id})</li>
+}
+</ul>
+
+
+<p>@Html.ActionLink("Add new Class1", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
