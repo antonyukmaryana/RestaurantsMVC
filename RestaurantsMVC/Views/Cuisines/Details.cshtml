@@ -11,7 +11,7 @@
 
 @foreach (Restaurant restaurant in ViewBag.RestaurantList)
 {
-    <p>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId})</p>
+    <p>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId})</p>
     
 }
 
