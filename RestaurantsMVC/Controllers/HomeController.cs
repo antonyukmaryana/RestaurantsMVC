@@ -1,8 +1,8 @@
 
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using RestaurantsMVC.Models;
 
-namespace ProjectName.Controllers
+namespace RestaurantsMVC.Controllers
 {
     public class HomeController : Controller
     {
